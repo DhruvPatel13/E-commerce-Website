@@ -1,0 +1,145 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+.content_holder {
+  margin-top: 8vh;
+  display: flex;
+  width: clamp(300px, 90%, 1200px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation: popIn 0.5s ease-out;
+  padding: 5px;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.login_left {
+  flex: 1;
+  overflow: hidden;
+}
+.login_left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.login_left img:hover {
+  transform: scale(1.05);
+}
+.login_right {
+  flex: 1;
+  padding: clamp(20px, 5vw, 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo_holder {
+  margin-top: -2vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.logo_holder img {
+  max-width: 200px;
+}
+.input_box {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input_box input {
+  padding: 12px 15px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 100%;
+  background-color: var(--inputBackground);
+  color: var(--color);
+}
+.password_holder {
+  position: relative;
+}
+.password_holder img {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  width: 30px;
+}
+.input_box button[type="submit"] {
+  background: var(--gradientDark);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+.input_box button[type="submit"]:hover {
+  opacity: 1;
+  background: var(--gradientDark);
+}
+.policy_holder {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--greyText);
+  padding-left: 5px;
+}
+.policy_holder input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+.toggler_holder {
+  margin-top: 20px;
+  text-align: center;
+}
+.toggler_holder p {
+  font-size: 14px;
+  color: var(--greyText);
+}
+.toggler_holder span {
+  font-size: 12px;
+  background: var(--gradientDark);
+  color: transparent;
+  background-clip: text;
+  --webkit-background-clip: text;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease;
+}
+.toggler_holder span:hover {
+  filter: drop-shadow(0 0 3px var(--borderGrey));
+}
+
+@media (max-width: 768px) {
+  .content_holder {
+    flex-direction: column;
+  }
+  .login_left {
+    display: none;
+  }
+  .login_right {
+    padding: clamp(15px, 5vw, 30px);
+    width: 100%;
+  }
+}

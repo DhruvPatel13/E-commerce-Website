@@ -1,0 +1,17 @@
+.card_holder {
+  margin-top: 3vw;
+  width: 100%;
+  gap: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 950px) {
+  .card_holder {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .card_holder {
+    grid-template-columns: 1fr 1fr;
+  }
+}

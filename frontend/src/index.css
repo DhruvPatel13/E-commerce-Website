@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /* according to theme */
+  --gradient1: 0, 115, 255;
+  --gradient2: 136, 17, 255;
+  --inputBackground: #2f3b5417;
+  --greyText: #000000a7;
+  --borderBlack: black;
+  --borderGrey: #d3d1d1;
+  --background-color: whitesmoke;
+  --color: black;
+
+  /* static */
+  --gradientDark: linear-gradient(
+    135deg,
+    rgba(var(--gradient1), 0.7),
+    rgba(var(--gradient2), 0.7)
+  );
+  --gradientLight: linear-gradient(
+    45deg,
+    rgba(var(--gradient1), 0.2),
+    rgba(var(--gradient2), 0.2)
+  );
+  --gradientText: linear-gradient(
+    0deg,
+    rgb(var(--gradient1)),
+    rgb(var(--gradient2))
+  );
+  --borderColored: var(--gradient2);
+  --shadow-rgb: 139, 139, 139;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  transition: background-color 0.4s ease-in-out;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--color);
+  animation: fadeIn 3s ease-in-out;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.invert {
+  filter: invert(100%);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(var(--borderColored));
+  outline: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* overriding default toastify styles */
+@media (max-width: 480px) {
+  .toastBody {
+    font-size: 15px;
+    font-weight: 450;
+  }
+  .Toastify__toast--error {
+    background-color: #fae1e2;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: auto;
+    width: 260px;
+    color: black;
+  }
+  .Toastify__toast--success {
+    width: 260px;
+    background-color: hsl(144, 66%, 84%);
+    padding: 5px 10px;
+    margin: 10px;
+    margin-left: auto;
+    border-radius: 10px;
+    color: black;
+  }
+}

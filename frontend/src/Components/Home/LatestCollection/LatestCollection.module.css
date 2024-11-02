@@ -1,0 +1,33 @@
+.latest_collection {
+  margin: 6vw 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title_holder {
+  text-align: center;
+}
+.title_holder p {
+  color: var(--greyText);
+  font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+}
+.card_holder {
+  margin: 5vh auto;
+  width: 100%;
+  gap: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 950px) {
+  .card_holder {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .card_holder {
+    width: 95%;
+    grid-template-columns: 1fr 1fr;
+  }
+}

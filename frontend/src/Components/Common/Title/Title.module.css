@@ -1,0 +1,31 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h2 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  background: var(--gradientDark);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 0 5px rgba(var(--shadow-rgb), 0.4))     
+          drop-shadow(0 0 10px rgba(var(--shadow-rgb), 0.4))    
+          drop-shadow(0 0 15px rgba(var(--shadow-rgb), 0.4))    
+          drop-shadow(0 0 20px rgba(var(--shadow-rgb), 0.4))   
+          drop-shadow(0 0 30px rgba(var(--shadow-rgb), 0.4));
+}
+.title .line {
+  margin-left: 1vw;
+  display: inline-block;
+  width: clamp(50px, 10vw, 70px);
+  height: 3px;
+  background: var(--gradientDark);
+}
+
+@media (max-width: 600px) {
+  .title h2,
+  .title h2 span {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,69 @@
+.holder {
+  width: 100%;
+  padding: clamp(10px, 3vw, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back_btn {
+  align-self: flex-start;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.back_btn img {
+  transform: rotate(180deg);
+  width: clamp(26px, 4vw, 30px);
+  height: clamp(16px, 4vw, 20px);
+}
+.back_btn p {
+  font-size: clamp(14px, 3vw, 16px);
+}
+.profile_content {
+  margin-top: 3vh;
+  width: clamp(300px, 30vw, 600px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input_holder {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input_holder label {
+  margin-left: 10px;
+  font-size: clamp(14px, 3vw, 16px);
+  color: var(--greyText);
+}
+.input_holder input {
+  background-color: var(--inputBackground);
+  color: var(--color);
+  padding: clamp(8px, 2vw, 10px);
+  border: 1px solid var(--borderGrey);
+  border-radius: 4px;
+  font-size: clamp(12px, 3vw, 16px);
+}
+.input_holder img {
+  position: absolute;
+  width: 35px;
+  top: 50%;
+  right: 1%;
+}
+.profile_content button[type="submit"] {
+  background: var(--gradientDark);
+  color: white;
+  border: none;
+  padding: 2vh 4vh;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(12px, 3vw, 16px);
+  transition: opacity 0.4s ease;
+  opacity: 0.67;
+}
+.profile_content button[type="submit"]:hover {
+  background: var(--gradientDark);
+  opacity: 1;
+}

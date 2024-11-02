@@ -1,0 +1,95 @@
+.search_bar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border 3s linear;
+  overflow: hidden;
+}
+.search_bar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--borderBlack);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease;
+}
+.search_bar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--borderBlack);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease;
+}
+.search_bar.active::before,
+.search_bar.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.search_bar.active {
+  transform: translate(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.6s ease;
+}
+.holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-200%);
+  transition: all 0.3s linear, opacity 0.1s ease;
+}
+.holder.active {
+  transform: translate(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.6s ease;
+}
+.input_box {
+  height: 5vh;
+  min-width: 45%;
+  max-width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1.5px solid var(--borderBlack);
+  border-radius: 20px;
+}
+.input_box input {
+  font-size: 1rem;
+  background: transparent;
+  font-weight: 500;
+  padding: 0 2vh;
+  width: clamp(80%, 36vw, 100%);
+  border: none;
+  outline: none;
+  color: var(--color);
+}
+.input_box input + img {
+  height: 3.5vh;
+  width: 3.5vh;
+  cursor: pointer;
+}
+.holder > img {
+  height: 2.2vh;
+  width: 2.2vh;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .input_box {
+    min-width: 75%;
+  }
+}

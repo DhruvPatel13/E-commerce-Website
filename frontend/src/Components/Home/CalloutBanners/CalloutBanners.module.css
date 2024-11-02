@@ -1,0 +1,103 @@
+.callout_banners {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.callout_left,
+.callout_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Banner Styles */
+.men_banner,
+.women_banner,
+.kids_girl_banner,
+.kids_boy_banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: clamp(200px, 30vw, 350px);
+}
+
+.left_img_holder,
+.right_img_holder {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_img_holder img,
+.right_img_holder img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  width: 100%;
+}
+.left_box,
+.right_box {
+  width: fit-content;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  text-align: end;
+}
+.left_box p,
+.right_box p {
+  margin: 0 0 10px 0;
+  font-size: clamp(.9rem, 1.5vw, 1.2rem);
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 1vh 2vh;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Hover Effects */
+.men_banner:hover .left_img_holder,
+.women_banner:hover .left_img_holder,
+.kids_girl_banner:hover .right_img_holder,
+.kids_boy_banner:hover .right_img_holder {
+  transform: scale(1.1);
+}
+
+.men_banner:hover .left_box,
+.women_banner:hover .left_box,
+.kids_girl_banner:hover .right_box,
+.kids_boy_banner:hover .right_box {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .callout_banners {
+    flex-direction: column;
+  }
+  .men_banner,
+  .women_banner {
+    height: clamp(190px, 50vw, 320px);
+    object-position: center top;
+  }
+ .callout_right{
+    display: none;
+ }
+}

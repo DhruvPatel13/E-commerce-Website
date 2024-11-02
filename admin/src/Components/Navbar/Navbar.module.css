@@ -1,0 +1,90 @@
+header {
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 1%;
+  box-shadow: 0 1px 5px rgba(var(--shadow-rgb), 0.2),
+    0 10px 20px rgba(var(--shadow-rgb), 0.2);
+}
+nav {
+  position: sticky;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo_holder {
+  width: clamp(15%, 20vw, 20%);
+  display: flex;
+  align-items: center;
+}
+.logo_holder img {
+  width: clamp(100px, 20vw, 250px);
+}
+.icons_holder {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.toggle_container {
+  position: relative;
+}
+.checkbox {
+  display: none;
+}
+.toggle_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vh;
+  height: 4vh;
+  background: linear-gradient(to right, #cfdbf869, #dbcff869);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.toggle_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5vh;
+  height: 3.5vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateX(-5px);
+}
+.checkbox:checked + .toggle_label {
+  background: #212121;
+}
+.checkbox:checked + .toggle_label .toggle_icon {
+  transform: translateX(30px);
+}
+.checkbox:checked + .toggle_label img {
+  transform: translateX(-30px);
+}
+.toggle_label img {
+  transform: translateX(2px);
+  width: clamp(20px, 3vh, 35px);
+  padding-bottom: 2px;
+}
+
+.login_toggler button {
+  padding: 1vh 4vh;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background: var(--gradientDark);
+  color: white;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  cursor: pointer;
+  opacity:  0.6;
+  transition: opacity 0.5s ease;
+}
+.login_toggler button:hover {
+  opacity: 1;
+  background: var(--gradientDark);
+}

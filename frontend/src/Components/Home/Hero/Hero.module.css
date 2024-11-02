@@ -1,0 +1,212 @@
+.hero {
+  border: 3px solid var(--borderBlack);
+  display: flex;
+  height: 50vw;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 40%;
+  max-width: 55%;
+}
+.left_content {
+  min-width: 45%;
+  max-width: 70%;
+  position: relative;
+}
+.left_title {
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: clamp(1.4rem, 3.3vw, 4rem);
+}
+.left_title span {
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  -webkit-text-stroke: 1.2px var(--greyText);
+  color: transparent;
+}
+.left_text {
+  margin-top: 2vh;
+  font-size: clamp(0.6rem, 1.5vw, 1.2rem);
+  color: var(--greyText);
+}
+.video {
+  width: 130px;
+  position: absolute;
+  right: 4rem;
+  bottom: 8px;
+}
+.hero_left button {
+  margin-top: 3vh;
+  width: 50%;
+  border: 1.5px solid var(--borderBlack);
+  border-radius: 40px;
+  font-size: clamp(0.6rem, 1.6vw, 1.8rem);
+  font-weight: 500;
+  padding: 3%;
+  background-color: var(--background-color);
+  cursor: pointer;
+  color: var(--color);
+}
+.hero_left button:hover {
+  background-color: var(--background-color);
+  color: var(--color);
+  filter: invert(100%);
+}
+
+/* hero center */
+.hero_center {
+  height: 100%;
+  min-width: 30%;
+  max-width: 50%;
+  flex: 1;
+  border-radius: 134px 0px 137px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border: 2px solid rgba(var(--borderColored));
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+}
+.fade_in {
+  opacity: 1;
+}
+.fade_out {
+  opacity: 0;
+}
+.hero_center img {
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+  filter: drop-shadow(3px -7px 20px black);
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  transition: opacity 0.5s ease;
+}
+
+/* hero right */
+.hero_right {
+  min-width: 10%;
+  max-width: 15%;
+  flex: 0.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.right_info {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.right_img_holder {
+  height: 7.5vw;
+  width: 7.5vw;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  place-items: center;
+  background-color: var(--background-color);
+  position: relative;
+}
+.right_img_holder::before {
+  position: absolute;
+  content: "";
+  background: var(--gradientDark);
+  z-index: -1;
+  height: 104%;
+  width: 104%;
+  border-radius: inherit;
+}
+.right_img_holder img {
+  padding: 5px;
+  width: clamp(45px, 7vw, 100px);
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+.right_title {
+  font-family: "Merriweather";
+  margin-top: 1.5vh;
+  font-size: clamp(1.27rem, 2.7vw, 3rem);
+}
+.right_text {
+  font-size: clamp(0.75rem, 1.4vw, 1.2rem);
+  color: var(--greyText);
+}
+
+@media (max-width: 1250px) {
+  .video {
+    width: 100px;
+    right: 2rem;
+    bottom: 0.6rem;
+  }
+}
+@media (max-width: 900px) {
+  .video {
+    width: 90px;
+    right: 1rem;
+    transform: rotate(7deg);
+  }
+  .hero_center {
+    border-radius: 120px 0 120px 0;
+  }
+}
+@media (max-width: 750px) {
+  .video {
+    width: 85px;
+    bottom: 0;
+    right: 0.6rem;
+  }
+  .hero_center {
+    border-radius: 105px 0px 105px 0px;
+  }
+}
+@media (max-width: 680px) {
+  .video {
+    width: 65px;
+    right: 0.8rem;
+    transform: rotate(5deg);
+  }
+  .hero_right {
+    display: none;
+  }
+  .hero_center {
+    border-radius: 0;
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .hero {
+    border-width: 2px;
+  }
+
+  .left_title span {
+    -webkit-text-stroke: .7px var(--greyText);
+  }
+  .video {
+    display: none;
+  }
+  .hero_left button {
+    margin-top: 0;
+    border-width: 2px;
+    font-weight: 600;
+    width: 60%;
+  }
+  .left_text {
+    display: none;
+  }
+}

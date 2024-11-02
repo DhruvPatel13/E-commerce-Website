@@ -1,0 +1,33 @@
+.filter_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 100%;
+}
+.filter_content h3 {
+  color: var(--greyText);
+  font-size: 1em;
+}
+.left_content,
+.right_content {
+  background: var(--gradientLight);
+  width: 100%;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: rgba(var(--shadow-rgb), 0.3) 1px 7px 10px 0px;
+  font-size: clamp(1rem, 1vw, 1rem);
+  position: relative;
+  border:1px solid rgb(var(--borderColored));
+}
+.input_box {
+  padding: 0 2%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.input_box label {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  display: flex;
+  gap: 10px;
+}

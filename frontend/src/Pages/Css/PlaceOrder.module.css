@@ -1,0 +1,129 @@
+.place_order_holder {
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5vw;
+  padding: 0 1%;
+}
+.holder_left {
+  width: clamp(65%, 70vw, 100%);
+}
+.holder_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: clamp(35%, 50vw, 50%);
+}
+.delivery_form {
+  margin-top: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.input_half,
+.input_full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input_full input,
+.input_half input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--borderGrey);
+  border-radius: 4px;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  background: var(--inputBackground);
+  color: var(--color);
+}
+.input_half {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input_half input {
+  width: 49%;
+}
+
+/* payment */
+.payment_methods {
+  margin-top: 2vh;
+  width: 100%;
+}
+.payment_method_content {
+  margin-top: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.payment_method {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--borderGrey);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.payment_method span {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--borderGrey);
+  border-radius: 50%;
+  background-color: transparent;
+}
+.payment_method span.circle {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+.payment_method img {
+  height: 20px;
+  object-fit: contain;
+}
+.payment_method.active {
+  mix-blend-mode: screen;
+}
+.payment_method p {
+  font-size: 14px;
+  color: var(--greyText);
+}
+.holder_right button {
+  width: clamp(50%, 50vw, 100%);
+  padding: 15px;
+  background: var(--gradientDark);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+.holder_right button:hover {
+  opacity: 1;
+  background: var(--gradientDark);
+}
+
+@media (max-width: 768px) {
+  .place_order_holder {
+    flex-direction: column;
+  }
+  .holder_left,
+  .holder_right {
+    width: 100%;
+  }
+  .cart_total_holder {
+    align-self: flex-start;
+  }
+  .payment_methods .title {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10vw;
+  }
+  .payment_method_content {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,25 @@
+.cart_total_holder {
+  width: clamp(300px, 50vw, 550px);
+  margin: 20px auto;
+  padding: 20px;
+}
+.content_holder {
+  margin-top: 20px;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borderGrey);
+}
+.box p {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
+.box:last-child {
+  border-bottom: none;
+  color: transparent;
+  font-weight: 700;
+  background: var(--gradientText);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
