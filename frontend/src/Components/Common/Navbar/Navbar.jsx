@@ -53,7 +53,6 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <header>
       <nav>
         <div className={navStyles.logo_holder}>
           <Link
@@ -241,7 +240,6 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </header>
   );
 };
 

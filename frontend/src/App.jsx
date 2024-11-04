@@ -30,7 +30,7 @@ const App = () => {
       return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
-  
+
   useEffect(() => {
     document.body.style.overflow = loading || !pageReady ? "hidden" : "auto";
   }, [loading, pageReady]);
@@ -38,23 +38,25 @@ const App = () => {
   if (loading || !pageReady) return <Spinner />;
 
   return (
-    <div className={appStyles.app}>
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/collection" element={<Collection />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/product/:productId" element={<ViewProduct />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/place-order" element={<PlaceOrder />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/verify" element={<Verify />} />
-      </Routes>
+      <div className={appStyles.app}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/product/:productId" element={<ViewProduct />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/place-order" element={<PlaceOrder />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/verify" element={<Verify />} />
+        </Routes>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
