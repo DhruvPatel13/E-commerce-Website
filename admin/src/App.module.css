@@ -8,7 +8,7 @@
 
 @media (min-width: 1600px) {
   body {
-    background-color: white;
+    background-color: var(--background-color);
   }
   .app {
     padding-left: calc((40vw - 1700px) / 2);
