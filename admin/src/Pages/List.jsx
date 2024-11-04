@@ -45,11 +45,11 @@ const List = () => {
               <p className={listStyles.price}>
                 {item.offer_price > 0 ? (
                   <>
-                    {currency} {item.offer_price}/<span>{item.price}</span>
+                    {currency}{item.offer_price}/<span>{item.price}</span>
                   </>
                 ) : (
                   <>
-                    {currency} {item.price}
+                    {currency}{item.price}
                   </>
                 )}
               </p>

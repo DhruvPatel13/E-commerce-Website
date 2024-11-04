@@ -1,15 +1,14 @@
-header {
-  top: 0;
+nav {
+  background-color: var(--background-color);
   width: 100%;
   height: 10vh;
   padding: 0 1%;
   box-shadow: 0 1px 5px rgba(var(--shadow-rgb), 0.2),
     0 10px 20px rgba(var(--shadow-rgb), 0.2);
-}
-nav {
   position: sticky;
+  top: 0;
+  left: 0;
   z-index: 10;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,7 +80,7 @@ nav {
   color: white;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   cursor: pointer;
-  opacity:  0.6;
+  opacity: 0.6;
   transition: opacity 0.5s ease;
 }
 .login_toggler button:hover {
