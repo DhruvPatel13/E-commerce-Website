@@ -73,13 +73,13 @@
   height: 70px;
 }
 .content {
-    margin-top: 150px;
+  margin-top: 150px;
   text-align: center;
   color: white;
   z-index: 10;
 }
 .welcome-text {
-  font-size: clamp(3rem, 6vw, 4rem);
+  font-size: clamp(2.3rem, 6vw, 4rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
   animation: fade-in 1s ease-out;
